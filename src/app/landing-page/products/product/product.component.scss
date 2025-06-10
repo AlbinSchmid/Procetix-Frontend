@@ -1,0 +1,39 @@
+@use './../../../../styles.scss' as *;
+
+section {
+    @include flex-position($fd: column, $ai: flex-start, $jc: flex-start);
+    @include width-height(100%, 420px);
+    background-color: white;
+    max-width: 400px;
+    overflow: hidden;
+    transition: transform 250ms ease;
+    cursor: pointer;
+    box-shadow: 0px 0px 42px -21px rgba(66, 68, 90, 1);
+
+    &:hover {
+        transform: scale(1.05);
+    }
+
+    img {
+        @include width-height(100%);
+        object-fit: cover;
+    }
+
+    div {
+        padding: 16px 18px;
+        h1 {
+            @include font-style($fs: 24px, $fw: 600, $lh: 1.2);
+        }
+
+        p {
+            @include font-style($fs: 18px, $fw: 400);
+            color: $grey;
+            margin-top: 10px;
+        }
+
+        mat-icon {
+            @include font-style($fs: 20px, $fw: 700);
+            margin-bottom: -3px;
+        }
+    }
+}

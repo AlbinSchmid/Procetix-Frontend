@@ -1,0 +1,30 @@
+@use './../../../styles.scss' as *;
+
+section {
+    @include width-height(100%, 100dvh);
+    @include flex-position($fd: column, $ai: flex-start);
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+        radial-gradient(circle, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.5) 100%),
+        url('/assets/img/background-aot.png');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 0 $padding-side;
+
+    h1 {
+        max-width: 700px;
+        @include font-style($fs: 64px, $fw: 700, $lh: 1.2);
+    }
+
+    p {
+        @include font-style($fs: 40px, $fw: 400);
+        margin-top: 20px;
+    }
+
+    button {
+        @include font-style($fs: 20px, $fw: 600);
+        margin-top: 28px;
+        padding: 14px 28px;
+    }
+}
