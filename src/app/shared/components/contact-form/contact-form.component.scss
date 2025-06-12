@@ -1,0 +1,81 @@
+@use './../../../../styles.scss' as *;
+
+$mt-group: 26px;
+
+form {
+    @include flex-position($fd: column, $ai: flex-start);
+    width: 100%;
+
+    .input-group {
+        @include flex-position($fd: column, $ai: flex-start);
+        width: 100%;
+        margin-top: $mt-group;
+
+        h5 {
+            @include font-style($fs: 18px, $fw: 600);
+        }
+
+        .input-label {
+            @include flex-position($fd: column, $ai: flex-start);
+
+            input,
+            textarea {
+                @include font-style($fs: 18px, $fw: 400);
+                width: 100%;
+                margin-top: 4px;
+                padding: 8px 12px;
+                border: 1px solid black;
+
+                &::placeholder {
+                    color: rgba(0, 0, 0, 0.4);
+                }
+            }
+
+            textarea {
+                resize: none;
+                height: 200px;
+            }
+        }
+    }
+
+    .privacy-group {
+        margin-top: 28px;
+
+        .privacy-label {
+            div {
+                @include flex-position($fd: row, $ai: center);
+                gap: 4px;
+
+                p {
+                    @include font-style($fs: 18px, $fw: 400);
+                }
+            }
+        }
+    }
+
+    button {
+        @include font-style($fs: 20px, $fw: 500);
+        @include width-height(100%, auto);
+        max-width: 300px;
+        padding: 12px 0;
+        margin-top: 40px;
+        cursor: pointer;
+    }
+}
+
+label {
+    position: relative;
+    width: 100%;
+
+    .form-error {
+        @include font-style($fs: 16px, $fw: 400);
+        position: absolute;
+        bottom: -23px;
+        color: rgb(198, 0, 0);
+    }
+}
+
+mark {
+    color: rgb(198, 0, 0);
+    background-color: transparent;
+}

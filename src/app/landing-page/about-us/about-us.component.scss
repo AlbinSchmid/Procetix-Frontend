@@ -1,10 +1,12 @@
 @use './../../../styles.scss' as *;
 @use './../landing-page.component.scss' as landing;
 
-section {
+.background {
     @include width-height(100%, 80%);
+}
+
+section {
     @include flex-position($fd: row, $jc: space-between);
-    padding: 0 $padding-side;
 
     div {
         h1 {
@@ -13,7 +15,7 @@ section {
 
         a {
             @include font-style($fs: 20px, $fw: 500);
-            color: $grey;
+            color: $font-grey;
             text-decoration: underline;
 
             &:hover {
@@ -27,6 +29,4 @@ section {
     img {
         @include width-height(450px);
     }
-
-
 }

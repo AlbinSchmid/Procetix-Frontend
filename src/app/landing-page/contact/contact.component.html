@@ -1,0 +1,42 @@
+<div class="background">
+    <section class="mw-1920">
+        <h6 class="category-h6-blue">NEHMEN SIE KONTAKT AUF</h6>
+        <h1 class="catergory-h1">Wir freuen uns auf Ihre Anfrage!</h1>
+        <div class="contact-div">
+            <app-contact-form></app-contact-form>
+            <div class="contact-info">
+                <h2>Nehmen Sie Kontakt auf!</h2>
+                <h3>Email</h3>
+                <div class="items">
+                    <div>
+                        <mat-icon class="material-symbols-outlined" fontIcon="email"></mat-icon>
+                        <a href="mailto:contact@albin-schmid.com">contact&#64;albin-schmid.com</a>
+                    </div>
+                    <div>
+                        <mat-icon class="material-symbols-outlined" fontIcon="email"></mat-icon>
+                        <a href="mailto:m.schmid5&#64;gmx.net">m.schmid5&#64;gmx.net</a>
+                    </div>
+                </div>
+                <h3>Telefonnummern</h3>
+                <div class="items">
+                    <div>
+                        <mat-icon class="material-symbols-outlined" fontIcon="phone"></mat-icon>
+                        <a href="tel:+4369911345685">+43 699 113 456 85</a>
+                    </div>
+                    <div>
+                        <mat-icon class="material-symbols-outlined" fontIcon="phone"></mat-icon>
+                        <a href="tel:+436606330710">+43 660 633 071 0</a>
+                    </div>
+                </div>
+                <h3>Öffnungszeiten</h3>
+                <div class="items">
+                    <div *ngFor="let day of open_days">
+                        <mat-icon class="material-symbols-outlined">access_time</mat-icon>
+                        <p class="day">{{ day.day }}</p>
+                        <p>{{ day.time }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

@@ -1,0 +1,66 @@
+@use './../../../styles.scss' as *;
+@use './../landing-page.component.scss' as landing;
+
+.background {
+    @include width-height(100%, 100%);
+}
+
+section {
+    @include flex-position($fd: column, $ai: flex-start);
+
+    .contact-div {
+        @include flex-position($fd: row, $jc: space-between);
+        gap: 200px;
+
+        app-contact-form,
+        .contact-info {
+            width: 100%;
+        }
+
+        .contact-info {
+            @include flex-position($fd: column, $ai: flex-start);
+            padding: 32px 40px;
+            background-color: $div-light-grey;
+
+            h2 {
+                @include font-style($fs: 26px, $fw: 700);
+            }
+
+            h3 {
+                @include font-style($fs: 20px, $fw: 700);
+                margin-top: 20px;
+            }
+
+            .items {
+                @include flex-position($fd: column, $ai: flex-start);
+                margin-top: 12px;
+                color: $font-grey;
+                gap: 4px;
+
+                div {
+                    @include flex-position($fd: row, $jc: flex-start);
+                    gap: 8px;
+
+                    a {
+                        @include font-style($fs: 18px, $fw: 400);
+                        text-decoration: underline;
+
+                        &:hover {
+                            transition: 125ms;
+                            text-decoration: none;
+                            color: $blue;
+                        }
+                    }
+
+                    p {
+                        @include font-style($fs: 18px, $fw: 400);
+                    }
+
+                    .day {
+                        width: 140px;
+                    }
+                }
+            }
+        }
+    }
+}

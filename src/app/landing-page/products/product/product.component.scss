@@ -9,9 +9,18 @@ section {
     transition: transform 250ms ease;
     cursor: pointer;
     box-shadow: 0px 0px 42px -21px rgba(66, 68, 90, 1);
+    padding: 0;
 
     &:hover {
         transform: scale(1.05);
+    }
+
+    &:hover h1 {
+        color: $blue;
+    }
+
+    &:hover mat-icon {
+        transform: translateX(5px);
     }
 
     img {
@@ -23,17 +32,19 @@ section {
         padding: 16px 18px;
         h1 {
             @include font-style($fs: 24px, $fw: 600, $lh: 1.2);
+            transition: 200ms ease;
         }
 
         p {
             @include font-style($fs: 18px, $fw: 400);
-            color: $grey;
+            color: $font-grey;
             margin-top: 10px;
         }
 
         mat-icon {
             @include font-style($fs: 20px, $fw: 700);
-            margin-bottom: -3px;
+            transition: transform 200ms ease;
+            margin-bottom: -1px;
         }
     }
 }

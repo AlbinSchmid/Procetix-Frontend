@@ -1,12 +1,14 @@
 @use './../../../styles.scss' as *;
 @use './../landing-page.component.scss' as landing;
 
-section {
+.background {
     @include width-height(100%, 80%);
-    @include flex-position($fd: column, $ai: flex-start);
-    padding: 0 $padding-side;
-    background-color: #ebebeb;
+    background-color: $div-light-grey;
+}
 
+section {
+    @include flex-position($fd: column, $ai: flex-start);
+    
     div {
         @include flex-position($fd: row, $jc: space-between);
         @include width-height(100%);

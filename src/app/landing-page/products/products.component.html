@@ -1,9 +1,11 @@
-<section>
-    <h6 class="category-h6-blue">OPTIMIERUNG FÜR UNTERNEHMEN</h6>
-    <h1 class="catergory-h1">Effizienz steigern und kosten senken</h1>
-    <div>
-        @for (product of products; track $index) {
-        <app-product [product]="product"></app-product>
-        }
-    </div>
-</section>
+<div class="background">
+    <section class="mw-1920">
+        <h6 class="category-h6-blue">OPTIMIERUNG FÜR UNTERNEHMEN</h6>
+        <h1 class="catergory-h1">Effizienz steigern und kosten senken</h1>
+        <div>
+            @for (product of products; track $index) {
+            <app-product [product]="product"></app-product>
+            }
+        </div>
+    </section>
+</div>
