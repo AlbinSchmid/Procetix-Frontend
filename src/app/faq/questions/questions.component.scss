@@ -1,0 +1,14 @@
+@use './../../../styles.scss' as *;
+
+.background {
+    @include flex-position();
+}
+
+section {
+    @include width-height(1200px, auto);
+    @include flex-position($ai: flex-start, $fd: column);
+
+    div {
+        margin-bottom: 80px;
+    }
+}

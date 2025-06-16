@@ -36,8 +36,6 @@ section {
         }
 
         p {
-            @include font-style($fs: 18px, $fw: 400);
-            color: $font-grey;
             margin-top: 10px;
         }
 

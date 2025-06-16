@@ -7,6 +7,11 @@
 
 section {
     @include flex-position($jc: space-between);
+    padding: 0 $padding-side;
+
+    a {
+        @include flex-position();
+    }
 
     img {
         @include width-height(200px, 100%);
@@ -17,12 +22,12 @@ section {
         @include flex-position();
         gap: 40px;
 
-        button {
+        .contact-link {
             @include font-style(20px, 700);
             color: black;
             margin-left: 10px;
             background-color: transparent;
-            padding: 10px 20px;
+            padding: 24px 20px;
 
             &:hover {
                 transition: 250ms;

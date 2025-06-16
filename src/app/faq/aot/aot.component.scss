@@ -1,0 +1,22 @@
+@use './../../../styles.scss' as *;
+
+.background {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+        radial-gradient(circle, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.5) 100%), url('/assets/img/faq-background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+}
+
+section {
+    margin-top: 100px;
+    @include flex-position($fd: column, $ai: flex-start);
+    color: white;
+
+    h5 {
+        @include font-style(24px, 400, 32px);
+        margin-top: 16px;
+    }
+}

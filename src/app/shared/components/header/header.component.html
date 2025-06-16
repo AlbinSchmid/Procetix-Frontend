@@ -1,20 +1,22 @@
 <div class="background">
     <section class="mw-1920">
-        <img src="/assets/logo/logo.png" alt="Procetix Logo">
+        <a href="">
+            <img src="/assets/logo/logo.png" alt="Procetix Logo">
+        </a>
         <nav>
             <div class="custom-underline">
-                <a href="">Startseite</a>
+                <a href="#aot" [class.active]="activeSection === 'aot'">Startseite</a>
                 <div></div>
             </div>
             <div class="custom-underline">
-                <a href="">Über</a>
+                <a href="#about-us" [class.active]="activeSection === 'about-us'">Über uns</a>
                 <div></div>
             </div>
             <div class="custom-underline">
-                <a href="">Dienstleistungen</a>
+                <a href="#products" [class.active]="activeSection === 'products'">Dienstleistungen</a>
                 <div></div>
             </div>
-            <button mat-flat-button>KONTAKT</button>
+            <a href="#contact" class="contact-link" mat-flat-button>KONTAKT</a>
         </nav>
     </section>
 </div>

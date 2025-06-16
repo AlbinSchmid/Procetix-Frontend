@@ -1,0 +1,16 @@
+@use './../../../../styles.scss' as *;
+
+.background {
+    @include width-height(100%, auto);
+    box-shadow: 0px 0px 42px -21px rgba(66, 68, 90, 1);
+}
+
+section {
+    padding: 24px;
+    margin-bottom: 28px;
+
+    h4 {
+        @include font-style($fs: 24px, $fw: 600);
+        margin-bottom: 12px;
+    }
+}

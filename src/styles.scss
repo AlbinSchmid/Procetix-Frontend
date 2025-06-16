@@ -48,9 +48,39 @@ html {
   height: $h;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+app-header {
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+}
+
 a {
   text-decoration: none;
   color: inherit;
+}
+
+h1 {
+  @include font-style($fs: 64px, $fw: 700, $lh: 1.2);
+}
+
+p {
+  @include font-style($fs: 18px, $fw: 400);
+  color: $font-grey;
+}
+
+.category-h6-blue {
+  @include font-style($fs: 16px, $fw: 600);
+  color: $blue;
+}
+
+.category-h2 {
+  @include font-style($fs: 40px, $fw: 600, $lh: 1.2);
+  margin-top: 10px;
 }
 
 button {
@@ -63,7 +93,11 @@ mat-icon {
 
 section {
   @include width-height(100%, 100%);
-  padding: 0 $padding-side;
+  padding: 96px $padding-side;
+}
+
+div {
+  scroll-margin-top: 100px;
 }
 
 input:-webkit-autofill {
@@ -75,10 +109,6 @@ input:-webkit-autofill {
   max-width: 1920px;
 }
 
-.background {
-  @include flex-position();
-}
-
 .custom-underline {
   @include flex-position($ai: center, $jc: center);
   position: relative;
@@ -88,14 +118,16 @@ input:-webkit-autofill {
   a {
     @include font-style(18px, 400);
 
-    &:hover {
+    &:hover,
+    &.active {
       transition: 125ms;
       color: $blue;
     }
 
-    &:hover ~ div {
-      opacity: 1;
-      transform: translateY(0px);
+    &:hover~div,
+    &.active~div {
+      opacity: 1 !important;
+      transform: translateY(0px) !important;
     }
   }
 
