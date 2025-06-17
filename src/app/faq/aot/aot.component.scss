@@ -1,6 +1,7 @@
 @use './../../../styles.scss' as *;
 
 .background {
+    margin-top: $header-height;
     background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
         radial-gradient(circle, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.5) 100%), url('/assets/img/faq-background.jpg');
     background-size: cover;
@@ -11,7 +12,6 @@
 }
 
 section {
-    margin-top: 100px;
     @include flex-position($fd: column, $ai: flex-start);
     color: white;
 

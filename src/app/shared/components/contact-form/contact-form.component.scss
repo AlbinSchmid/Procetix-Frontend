@@ -13,54 +13,59 @@ form {
 
         h5 {
             @include font-style($fs: 18px, $fw: 600);
+            margin-bottom: 4px;
         }
 
         .input-label {
             @include flex-position($fd: column, $ai: flex-start);
 
             input,
-            textarea {
+            textarea,
+            select {
+            @include font-style($fs: 18px, $fw: 400);
+            width: 100%;
+            padding: 12px;
+            border: 1px solid black;
+
+            &::placeholder, .preview-select {
+                color: rgba(0, 0, 0, 0.4);
+            }
+        }
+
+        .checkbox-group {
+            @include flex-position($fd: column, $ai: flex-start);
+        }
+
+        textarea {
+            resize: none;
+            height: 200px;
+        }
+    }
+}
+
+.privacy-group {
+    margin-top: 28px;
+
+    .privacy-label {
+        div {
+            @include flex-position($fd: row, $ai: center);
+            gap: 4px;
+
+            p {
                 @include font-style($fs: 18px, $fw: 400);
-                width: 100%;
-                margin-top: 4px;
-                padding: 8px 12px;
-                border: 1px solid black;
-
-                &::placeholder {
-                    color: rgba(0, 0, 0, 0.4);
-                }
-            }
-
-            textarea {
-                resize: none;
-                height: 200px;
             }
         }
     }
+}
 
-    .privacy-group {
-        margin-top: 28px;
-
-        .privacy-label {
-            div {
-                @include flex-position($fd: row, $ai: center);
-                gap: 4px;
-
-                p {
-                    @include font-style($fs: 18px, $fw: 400);
-                }
-            }
-        }
-    }
-
-    button {
-        @include font-style($fs: 20px, $fw: 500);
-        @include width-height(100%, auto);
-        max-width: 300px;
-        padding: 12px 0;
-        margin-top: 40px;
-        cursor: pointer;
-    }
+button {
+    @include font-style($fs: 20px, $fw: 500);
+    @include width-height(100%, auto);
+    max-width: 300px;
+    padding: 12px 0;
+    margin-top: 40px;
+    cursor: pointer;
+}
 }
 
 label {
@@ -78,4 +83,8 @@ label {
 mark {
     color: rgb(198, 0, 0);
     background-color: transparent;
+}
+
+::ng-deep .mdc-label {
+    @include font-style($fs: 18px, $fw: 400);
 }

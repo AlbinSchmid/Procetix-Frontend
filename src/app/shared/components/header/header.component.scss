@@ -1,7 +1,7 @@
 @use './../../../../styles.scss' as *;
 
 .background {
-    @include width-height(100vw, 100px);
+    @include width-height(100vw, $header-height);
     background-color: white;
 }
 

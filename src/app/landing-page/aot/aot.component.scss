@@ -1,7 +1,8 @@
 @use './../../../styles.scss' as *;
 
 .background {
-    @include width-height(100%, 100dvh);
+    @include width-height(100%, calc(100dvh - $header-height));
+    margin-top: 100px;
     background-image:
         linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
         radial-gradient(circle, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.5) 100%),
@@ -13,6 +14,7 @@
 
 section {
     @include flex-position($fd: column, $ai: flex-start);
+    padding: 0 $padding-side;
     color: white;
 
     h1 {

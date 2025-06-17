@@ -1,0 +1,7 @@
+@use './../../styles.scss' as *;
+
+section {
+    margin-top: $header-height;
+    height: auto;
+    padding: $padding-top-bottom $padding-side-wide;
+}

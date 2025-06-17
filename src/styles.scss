@@ -5,6 +5,9 @@ $blue: #007BE5;
 $font-grey: #707070;
 $div-light-grey: #ebebeb;
 $padding-side: 100px;
+$padding-side-wide: 340px;
+$padding-top-bottom: 96px;
+$header-height: 100px;
 
 html {
   @include mat.theme((color: (primary: $primary-palette,
@@ -93,11 +96,15 @@ mat-icon {
 
 section {
   @include width-height(100%, 100%);
-  padding: 96px $padding-side;
+  padding: $padding-top-bottom $padding-side;
+}
+
+.background {
+  @include flex-position()
 }
 
 div {
-  scroll-margin-top: 100px;
+  scroll-margin-top: $header-height;
 }
 
 input:-webkit-autofill {

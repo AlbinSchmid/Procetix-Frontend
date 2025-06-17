@@ -5,8 +5,9 @@
 }
 
 section {
-    @include width-height(1200px, auto);
+    @include width-height(100%, auto);
     @include flex-position($ai: flex-start, $fd: column);
+    padding: $padding-top-bottom $padding-side-wide;
 
     div {
         margin-bottom: 80px;
