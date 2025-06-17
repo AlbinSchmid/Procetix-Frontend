@@ -78,7 +78,7 @@
     <div class="input-group">
         <h5>Telefonnummer <mark>*</mark></h5>
         <label class="input-label">
-            <input type="number" name="phone" placeholder="+49 123 4567890" pattern="^\+?[0-9\s\-\/]{7,20}$"
+            <input type="tel" name="phone" placeholder="+49 123 4567890" pattern="^\+?[0-9\s\-\/]{7,20}$"
                 [(ngModel)]="projectData.phone" #phone="ngModel" required>
             <span class="form-error" *ngIf="phone.invalid && phone.touched || showErrors">
                 {{ errorMessagePhone(phone, projectData) }}
@@ -103,13 +103,13 @@
     <div class="input-group">
         <h5>Wie haben Sie von uns erfahren?</h5>
         <label class="input-label">
-            <select name="referral" [(ngModel)]="projectData.referral" #referral="ngModel" required aria-placeholder="Bitte auswählen">
+            <select name="referral" [(ngModel)]="projectData.referral" #referral="ngModel" aria-placeholder="Bitte auswählen" [ngClass]="{ 'placeholder': projectData.referral === '' }">
                 <option value="" class="preview-select">Bitte auswählen</option>
-                <option value="google">Empfehlung</option>
-                <option value="facebook">Suchmaschine</option>
-                <option value="newsletter">Soziale Medien</option>
-                <option value="friend">Veranstaltung</option>
-                <option value="other">Sonstiges</option>
+                <option value="Referral">Empfehlung</option>
+                <option value="Search Engine">Suchmaschine</option>
+                <option value="Social Media">Soziale Medien</option>
+                <option value="Event">Veranstaltung</option>
+                <option value="Other">Sonstiges</option>
             </select>
         </label>
     </div>
@@ -126,24 +126,24 @@
     <div class="input-group">
         <h5>Wie viele mitarbeiter hat ihr unternehmen?</h5>
         <label class="input-label">
-            <select name="referral" id="referral">
-                <option value="" class="preview-select" selected>Bitte auswählen</option>
-                <option value="google">1-10</option>
-                <option value="facebook">11-50</option>
-                <option value="newsletter">51-200 Medien</option>
-                <option value="friend">200+</option>
+            <select name="companySize" id="companySize" [(ngModel)]="projectData.companySize" #companySize="ngModel" [ngClass]="{ 'placeholder': projectData.companySize === '' }">
+                <option value="" class="preview-select">Bitte auswählen</option>
+                <option value="1-10">1-10</option>
+                <option value="11-50">11-50</option>
+                <option value="51-200">51-200</option>
+                <option value="200+">200+</option>
             </select>
         </label>
     </div>
     <div class="input-group">
         <h5>Welches budget haben sie eingeplant?</h5>
         <label class="input-label">
-            <select name="referral" id="referral">
-                <option value="" class="preview-select" selected>Bitte auswählen</option>
-                <option value="google">Unter 5.000 €</option>
-                <option value="facebook">5.000 - 10.000 €</option>
-                <option value="newsletter">10.000 - 20.000 €</option>
-                <option value="friend">Über 20.000 €</option>
+            <select name="budget" id="budget" [(ngModel)]="projectData.budget" #budget="ngModel" [ngClass]="{ 'placeholder': projectData.budget === '' }">
+                <option value="" class="preview-select">Bitte auswählen</option>
+                <option value="under-5000">Unter 5.000 €</option>
+                <option value="5000-10000">5.000 - 10.000 €</option>
+                <option value="10000-20000">10.000 - 20.000 €</option>
+                <option value="over-20000">Über 20.000 €</option>
             </select>
         </label>
     </div>

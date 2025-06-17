@@ -27,9 +27,9 @@ section {
         color: white;
     }
 
-    button {
+    a {
         @include font-style($fs: 20px, $fw: 600);
         margin-top: 28px;
-        padding: 14px 28px;
+        padding: 28px 28px;
     }
 }

@@ -26,7 +26,6 @@ export class ContactFormComponent {
     text: '',
     privacy: false
   }
-
   projectData = {
     name: '',
     email: '',
@@ -38,17 +37,20 @@ export class ContactFormComponent {
     consulting: false,
     referral: '',
     text: '',
-    workers: 0,
-    budget: 0
+    companySize: '',
+    budget: ''
   }
 
   showErrors = false;
+  
 
   submitForm(form: NgForm, data: object): void {
     if (form.invalid) {
+      console.log('Form is invalid');
       this.showErrors = true;
       return;
     }
+    console.log(data)
 
     // Handle form submission
   }

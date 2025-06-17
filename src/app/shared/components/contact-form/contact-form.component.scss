@@ -22,50 +22,51 @@ form {
             input,
             textarea,
             select {
-            @include font-style($fs: 18px, $fw: 400);
-            width: 100%;
-            padding: 12px;
-            border: 1px solid black;
-
-            &::placeholder, .preview-select {
-                color: rgba(0, 0, 0, 0.4);
-            }
-        }
-
-        .checkbox-group {
-            @include flex-position($fd: column, $ai: flex-start);
-        }
-
-        textarea {
-            resize: none;
-            height: 200px;
-        }
-    }
-}
-
-.privacy-group {
-    margin-top: 28px;
-
-    .privacy-label {
-        div {
-            @include flex-position($fd: row, $ai: center);
-            gap: 4px;
-
-            p {
                 @include font-style($fs: 18px, $fw: 400);
+                width: 100%;
+                padding: 12px;
+                border: 1px solid black;
+
+                &::placeholder,
+                .preview-select {
+                    color: rgba(0, 0, 0, 0.4);
+                }
+            }
+
+            .checkbox-group {
+                @include flex-position($fd: column, $ai: flex-start);
+            }
+
+            textarea {
+                resize: none;
+                height: 200px;
             }
         }
     }
-}
 
-button {
-    @include font-style($fs: 20px, $fw: 500);
-    @include width-height(100%, auto);
-    max-width: 300px;
-    padding: 12px 0;
-    margin-top: 40px;
-    cursor: pointer;
-}
+    .privacy-group {
+        margin-top: 28px;
+
+        .privacy-label {
+            div {
+                @include flex-position($fd: row, $ai: center);
+                gap: 4px;
+
+                p {
+                    @include font-style($fs: 18px, $fw: 400);
+                }
+            }
+        }
+    }
+
+    button {
+        @include font-style($fs: 20px, $fw: 500);
+        @include width-height(100%, auto);
+        max-width: 300px;
+        padding: 12px 0;
+        margin-top: 40px;
+        cursor: pointer;
+    }
 }
 
 label {
@@ -87,4 +88,15 @@ mark {
 
 ::ng-deep .mdc-label {
     @include font-style($fs: 18px, $fw: 400);
+}
+
+select {
+
+    option {
+        color: black;
+    }
+}
+
+select.placeholder {
+    color: rgba(0, 0, 0, 0.4);
 }
