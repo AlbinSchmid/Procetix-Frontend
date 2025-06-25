@@ -9,9 +9,12 @@ $padding-side-wide: 340px;
 $padding-top-bottom: 96px;
 $header-height: 100px;
 
+::ng-deep mat-spinner circle {
+  stroke: white !important;
+}
+
 html {
   @include mat.theme((color: (primary: $primary-palette,
-        tertiary: mat.$orange-palette,
         theme-type: light,
       ),
       typography: Roboto,
@@ -51,6 +54,10 @@ html {
   height: $h;
 }
 
+mat-spinner {
+  @include width-height(30px !important, 30px !important);
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -88,6 +95,12 @@ p {
 
 button {
   @include width-height(auto, auto);
+}
+
+button[disabled] {
+  --mdc-filled-button-disabled-container-color: rgba(0, 123, 229, 0.6);
+  --mdc-filled-button-disabled-label-text-color: white;
+  opacity: 1;
 }
 
 mat-icon {
