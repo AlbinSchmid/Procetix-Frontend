@@ -1,0 +1,20 @@
+@use './../../../styles.scss' as *;
+
+.background {
+    @include flex-position($fd: column, $ai: center, $jc: center);
+    background-color: $div-light-grey;
+}
+
+section {
+    @include flex-position($fd: row, $jc: space-between);
+
+    img {
+        @include width-height(450px);
+    }
+}
+
+.background-image {
+    @include width-height(100%, 600px);
+    @include background-image('/assets/img/marketing/campaign-background.png');
+    margin-top: 0;
+}

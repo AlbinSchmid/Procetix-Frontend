@@ -2,14 +2,7 @@
 
 .background {
     @include width-height(100%, calc(100dvh - $header-height));
-    margin-top: 100px;
-    background-image:
-        linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-        radial-gradient(circle, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.5) 100%),
-        url('/assets/img/background-aot.png');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+    @include background-image('/assets/img/landing-page/aot.png');
 }
 
 section {

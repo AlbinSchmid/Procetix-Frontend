@@ -3,10 +3,12 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
 import { FaqComponent } from './faq/faq.component';
 import { ProjectInquiryComponent } from './project-inquiry/project-inquiry.component';
 import { ProcessImprovementComponent } from './process-improvement/process-improvement.component';
+import { MarketingComponent } from './marketing/marketing.component';
 
 export const routes: Routes = [
     { path: '', component: LandingPageComponent },
     { path: 'faq', component: FaqComponent },
     { path: 'project-inquiry', component: ProjectInquiryComponent },
     { path: 'process-improvement', component: ProcessImprovementComponent },
+    { path: 'marketing', component: MarketingComponent },
 ];

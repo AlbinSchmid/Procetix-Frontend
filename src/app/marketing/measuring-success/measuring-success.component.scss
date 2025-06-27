@@ -1,0 +1,9 @@
+@use './../../../styles.scss' as *;
+
+.background {
+    background-color: $div-light-grey;
+}
+
+p {
+    max-width: none !important;
+}

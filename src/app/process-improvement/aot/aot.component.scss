@@ -1,5 +1,5 @@
 @use './../../../styles' as *;
 
 .background {
-    @include aot-background('/assets/img/process-improvement/aot.png');
+    @include background-image('/assets/img/process-improvement/aot.png');
 }

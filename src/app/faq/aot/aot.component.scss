@@ -1,5 +1,5 @@
 @use './../../../styles.scss' as *;
 
 .background {
-    @include aot-background('/assets/img/faq-background.jpg');
+    @include background-image('/assets/img/faq/aot.png');
 }

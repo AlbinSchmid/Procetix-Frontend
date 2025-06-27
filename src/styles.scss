@@ -54,7 +54,7 @@ html {
   height: $h;
 }
 
-@mixin aot-background($img-url: '/assets/img/prozess-improvement-background.png') {
+@mixin background-image($img-url: '/assets/img/prozess-improvement-background.png') {
   margin-top: $header-height;
   background-image:
     linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),

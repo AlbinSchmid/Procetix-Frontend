@@ -15,19 +15,19 @@ products = [
   {
     name: 'Prozessoptimierung',
     description: 'Effiziente Optimierung Ihrer Geschäftsprozesse.',
-    imageUrl: '/assets/img/product-1.png',
+    imageUrl: '/assets/img/landing-page/product-1.png',
     url: '/process-improvement'
   },
   {
     name: 'Marketing',
     description: 'Zielgerichtetes Online-Marketing für mehr Kunden.',
-    imageUrl: '/assets/img/product-2.png',
-    url: '/'
+    imageUrl: '/assets/img/landing-page/product-2.png',
+    url: '/marketing'
   },
   {
     name: 'Webseitenerstellung und -optimierung',
     description: 'Professionelle Webseiten für Ihren Online-Erfolg.',
-    imageUrl: '/assets/img/product-3.png',
+    imageUrl: '/assets/img/landing-page/product-3.png',
     url: '/'
   },
 ]
