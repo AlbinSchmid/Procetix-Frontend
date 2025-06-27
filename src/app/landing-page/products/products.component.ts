@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ProductComponent } from './product/product.component';
+import { url } from 'inspector';
 
 @Component({
   selector: 'app-products',
@@ -14,17 +15,20 @@ products = [
   {
     name: 'Prozessoptimierung',
     description: 'Effiziente Optimierung Ihrer Geschäftsprozesse.',
-    imageUrl: '/assets/img/product-1.png'
+    imageUrl: '/assets/img/product-1.png',
+    url: '/process-improvement'
   },
   {
-    name: 'Digitale lösungen',
-    description: 'Maßgeschneiderte digitale Lösungen für Ihr Unternehmen.',
-    imageUrl: '/assets/img/product-2.png'
+    name: 'Marketing',
+    description: 'Zielgerichtetes Online-Marketing für mehr Kunden.',
+    imageUrl: '/assets/img/product-2.png',
+    url: '/'
   },
   {
     name: 'Webseitenerstellung und -optimierung',
     description: 'Professionelle Webseiten für Ihren Online-Erfolg.',
-    imageUrl: '/assets/img/product-3.png'
+    imageUrl: '/assets/img/product-3.png',
+    url: '/'
   },
 ]
 }

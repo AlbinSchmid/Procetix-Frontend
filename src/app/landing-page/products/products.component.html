@@ -4,7 +4,9 @@
         <h2 class="category-h2">Effizienz steigern und kosten senken</h2>
         <div>
             @for (product of products; track $index) {
-            <app-product [product]="product"></app-product>
+            <a href="{{ product.url }}">
+                <app-product [product]="product"></app-product>
+            </a>
             }
         </div>
     </section>

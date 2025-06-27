@@ -54,6 +54,17 @@ html {
   height: $h;
 }
 
+@mixin aot-background($img-url: '/assets/img/prozess-improvement-background.png') {
+  margin-top: $header-height;
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    radial-gradient(circle, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.5) 100%),
+    url($img-url);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
 mat-spinner {
   @include width-height(30px !important, 30px !important);
 }
@@ -79,8 +90,13 @@ h1 {
 }
 
 p {
-  @include font-style($fs: 18px, $fw: 400);
+  @include font-style($fs: 22px, $fw: 400, $lh: 1.3);
   color: $font-grey;
+}
+
+.category-h2 {
+  @include font-style($fs: 40px, $fw: 600, $lh: 1.2);
+  margin-top: 10px;
 }
 
 .category-h6-blue {
@@ -88,9 +104,9 @@ p {
   color: $blue;
 }
 
-.category-h2 {
-  @include font-style($fs: 40px, $fw: 600, $lh: 1.2);
-  margin-top: 10px;
+.category-p {
+  margin-top: 20px;
+  max-width: 700px;
 }
 
 button {
@@ -105,6 +121,16 @@ button[disabled] {
 
 mat-icon {
   font-family: 'Material Icons';
+}
+
+.aot {
+  @include flex-position($fd: column, $ai: flex-start);
+  color: white;
+
+  h5 {
+    @include font-style(24px, 400, 32px);
+    margin-top: 16px;
+  }
 }
 
 section {
