@@ -3,6 +3,8 @@ import { HeaderComponent } from "../shared/components/header/header.component";
 import { FooterComponent } from "../shared/components/footer/footer.component";
 import { AotComponent } from './aot/aot.component';
 import { WhyprocessImprovementComponent } from "./why-process-improvement/why-process-improvement.component";
+import { OurServicesComponent } from './our-services/our-services.component';
+import { AdvantagesComponent } from "./advantages/advantages.component";
 
 @Component({
   selector: 'app-process-improvement',
@@ -10,7 +12,9 @@ import { WhyprocessImprovementComponent } from "./why-process-improvement/why-pr
     HeaderComponent,
     FooterComponent,
     AotComponent,
-    WhyprocessImprovementComponent
+    WhyprocessImprovementComponent,
+    OurServicesComponent,
+    AdvantagesComponent
 ],
   templateUrl: './process-improvement.component.html',
   styleUrl: './process-improvement.component.scss'

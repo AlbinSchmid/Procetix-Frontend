@@ -85,8 +85,24 @@ a {
   color: inherit;
 }
 
+.grey-a {
+  @include font-style($fs: 20px, $fw: 500);
+  color: $font-grey;
+  text-decoration: underline;
+
+  &:hover {
+    transition: 125ms;
+    text-decoration: none;
+    color: $blue;
+  }
+}
+
 h1 {
   @include font-style($fs: 64px, $fw: 700, $lh: 1.2);
+}
+
+h4 {
+  @include font-style($fs: 26px, $fw: 600);
 }
 
 p {
@@ -107,6 +123,11 @@ p {
 .category-p {
   margin-top: 20px;
   max-width: 700px;
+}
+
+ul {
+  @include font-style($fs: 22px, $fw: 400, $lh: 1.3);
+  color: $font-grey;
 }
 
 button {

@@ -13,18 +13,6 @@ section {
             max-width: 800px;
         }
 
-        a {
-            @include font-style($fs: 20px, $fw: 500);
-            color: $font-grey;
-            text-decoration: underline;
-
-            &:hover {
-                transition: 125ms;
-                text-decoration: none;
-                color: $blue;
-            }
-        }
-
         p {
             margin-bottom: 30px;
         }

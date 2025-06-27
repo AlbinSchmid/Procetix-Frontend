@@ -9,8 +9,7 @@
 section {
     padding: 24px;
 
-    h4 {
-        @include font-style($fs: 24px, $fw: 600);
-        margin-bottom: 12px;
+    p {
+        margin-top: 12px;
     }
 }

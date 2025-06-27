@@ -1,0 +1,16 @@
+@use './../../../styles.scss' as *;
+
+.background {
+    background-color: $div-light-grey;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin-top: 32px;
+}
+
+p {
+    margin-top: 12px;
+}
