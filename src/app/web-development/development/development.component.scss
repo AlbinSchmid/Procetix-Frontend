@@ -1,0 +1,20 @@
+@use './../../../styles.scss' as *;
+
+.background {
+    @include flex-position($fd: column, $ai: center, $jc: center);
+    background-color: $div-light-grey;
+}
+
+ul {
+    margin-top: 14px;
+}
+
+p {
+    max-width: none !important;
+}
+
+.background-image {
+    @include width-height(100%, 600px);
+    @include background-image('/assets/img/web-development/development-background.png');
+    margin-top: 0;
+}

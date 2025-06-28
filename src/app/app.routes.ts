@@ -4,6 +4,7 @@ import { FaqComponent } from './faq/faq.component';
 import { ProjectInquiryComponent } from './project-inquiry/project-inquiry.component';
 import { ProcessImprovementComponent } from './process-improvement/process-improvement.component';
 import { MarketingComponent } from './marketing/marketing.component';
+import { WebDevelopmentComponent } from './web-development/web-development.component';
 
 export const routes: Routes = [
     { path: '', component: LandingPageComponent },
@@ -11,4 +12,5 @@ export const routes: Routes = [
     { path: 'project-inquiry', component: ProjectInquiryComponent },
     { path: 'process-improvement', component: ProcessImprovementComponent },
     { path: 'marketing', component: MarketingComponent },
+    { path: 'web-development', component: WebDevelopmentComponent },
 ];

@@ -1,0 +1,14 @@
+@use './../../../styles.scss' as *;
+
+.background {
+    @include flex-position($fd: column, $ai: center, $jc: center);
+}
+
+section {
+    @include flex-position($fd: row, $jc: space-between);
+
+    img {
+        @include width-height(450px);
+    }
+}
+

@@ -22,7 +22,7 @@
     <div class="input-group">
         <h5>Telefonnummer <mark>*</mark></h5>
         <label class="input-label">
-            <input type="tel" name="phone" placeholder="+49 123 4567890" pattern="^\+?[0-9\s\-\/]{7,20}$"
+            <input type="tel" name="phone" placeholder="+43 123 4567890" pattern="^\+?[0-9\s\-\/]{7,20}$"
                 [(ngModel)]="contactData.phone" #phone="ngModel" required>
             <span class="form-error" *ngIf="phone.invalid && phone.touched || showErrors">
                 {{ errorMessagePhone(phone, contactData) }}
@@ -79,7 +79,7 @@
     <div class="input-group">
         <h5>Telefonnummer <mark>*</mark></h5>
         <label class="input-label">
-            <input type="tel" name="phone" placeholder="+49 123 4567890" pattern="^\+?[0-9\s\-\/]{7,20}$"
+            <input type="tel" name="phone" placeholder="+43 123 4567890" pattern="^\+?[0-9\s\-\/]{7,20}$"
                 [(ngModel)]="contactData.phone" #phone="ngModel" required>
             <span class="form-error" *ngIf="phone.invalid && phone.touched || showErrors">
                 {{ errorMessagePhone(phone, contactData) }}

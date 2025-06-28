@@ -1,0 +1,10 @@
+@use './../../../styles.scss' as *;
+
+section {
+    @include flex-position($fd: row, $jc: space-between);
+
+    img {
+        @include width-height(450px);
+    }
+}
+

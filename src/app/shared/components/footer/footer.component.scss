@@ -29,6 +29,7 @@ section {
         }
 
         p {
+            @include font-style($fs: 16px, $fw: 400);
             color: rgba($color: #ffffff, $alpha: 0.8);
         }
 

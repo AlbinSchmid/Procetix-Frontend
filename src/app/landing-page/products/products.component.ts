@@ -25,10 +25,10 @@ products = [
     url: '/marketing'
   },
   {
-    name: 'Webseitenerstellung und -optimierung',
+    name: 'Webseitenerstellung und Optimierung',
     description: 'Professionelle Webseiten für Ihren Online-Erfolg.',
     imageUrl: '/assets/img/landing-page/product-3.png',
-    url: '/'
+    url: '/web-development'
   },
 ]
 }

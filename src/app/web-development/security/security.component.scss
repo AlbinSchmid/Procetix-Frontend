@@ -1,0 +1,13 @@
+@use './../../../styles.scss' as *;
+
+.background {
+    background-color: $div-light-grey;
+}
+
+ul {
+    margin-top: 14px;
+}
+
+p {
+    max-width: none !important;
+}
