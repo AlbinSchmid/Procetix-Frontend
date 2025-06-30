@@ -1,0 +1,12 @@
+@use './../../../styles.scss' as *;
+
+.background {
+    margin-top: 0;
+    padding-top: $header-height;
+    height: calc(100dvh - $footer-height);
+}
+
+app-form {
+    @include width-height(100%, 100%);
+    @include flex-position();
+}

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ContactFormComponent } from '../../shared/components/contact-form/contact-form.component';
+import { ContactFormComponent } from '../../shared/components/form/form.component';
 import { MatIconModule } from '@angular/material/icon';
 import { CommonModule } from '@angular/common';
 

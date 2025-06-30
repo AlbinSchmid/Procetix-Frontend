@@ -7,6 +7,8 @@ import { MarketingComponent } from './marketing/marketing.component';
 import { WebDevelopmentComponent } from './web-development/web-development.component';
 import { LegalNoticeComponent } from './legal-notice/legal-notice.component';
 import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
+import { DashboardComponent } from './partner-portal/dashboard/dashboard.component';
+import { LoginComponent } from './partner-portal/login/login.component';
 
 export const routes: Routes = [
     { path: '', component: LandingPageComponent },
@@ -17,4 +19,6 @@ export const routes: Routes = [
     { path: 'web-development', component: WebDevelopmentComponent },
     { path: 'legal-notice', component: LegalNoticeComponent },
     { path: 'privacy-policy', component: PrivacyPolicyComponent },
+    { path: 'partner-portal', component: DashboardComponent },
+    { path: 'partner-portal/login', component: LoginComponent },
 ];

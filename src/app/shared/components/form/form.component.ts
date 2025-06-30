@@ -5,19 +5,21 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { ApiService } from '../../services/api.service';
 import { MatProgressSpinner } from '@angular/material/progress-spinner';
+import { MatIconModule } from '@angular/material/icon';
 
 @Component({
-  selector: 'app-contact-form',
+  selector: 'app-form',
   imports: [
     MatCheckboxModule,
     MatButtonModule,
     FormsModule,
     CommonModule,
     MatCheckboxModule,
-    MatProgressSpinner
+    MatProgressSpinner,
+    MatIconModule
   ],
-  templateUrl: './contact-form.component.html',
-  styleUrl: './contact-form.component.scss'
+  templateUrl: './form.component.html',
+  styleUrl: './form.component.scss'
 })
 export class ContactFormComponent {
   @Input() form: string = '';
@@ -40,6 +42,12 @@ export class ContactFormComponent {
     privacy: false,
   }
 
+  loginData = {
+    username: '',
+    password: '',
+  }
+
+  passwordVisible = false;
   loading = false;
   showErrors = false;
 
@@ -59,7 +67,27 @@ export class ContactFormComponent {
       return;
     }
     this.loading = true;
-    this.sendPostRequest(data, form);
+    if (this.form === 'login') {
+      this.sendLoginRequest(data, form);
+    } else {
+      this.sendPostRequest(data, form);
+    }
+  }
+
+  sendLoginRequest(data: object, form: NgForm): void {
+    this.apiService.postRequest(this.apiService.loginUrl, data).subscribe({
+      next: (response) => {
+        form.resetForm();
+        this.loading = false;
+        this.showErrors = false;
+        console.log('Login successful:', response);
+      },
+      error: (error) => {
+        this.loading = false;
+        this.showErrors = true;
+        console.error('Login failed:', error);
+      }
+    });
   }
 
   /**
@@ -102,9 +130,9 @@ export class ContactFormComponent {
    * @returns {string | null} An error message if the name is empty or too short,
    * or `null` if the name is valid.
    */
-  errorMessageName(data: object): string | null {
-    if (this.contactData.name.length === 0) return 'Geben Sie Ihren Namen ein.';
-    if (this.contactData.name.length === 1) return 'Der Name muss mindestens 2 Zeichen lang sein.';
+  errorMessageName(data: {name: string}): string | null {
+    if (data.name.length === 0) return 'Geben Sie Ihren Namen ein.';
+    if (data.name.length === 1) return 'Der Name muss mindestens 2 Zeichen lang sein.';
     return null;
   }
 
@@ -166,6 +194,34 @@ export class ContactFormComponent {
   }): string | null {
     const isChecked = data.processOptimization == true || data.digitalization == true || data.websiteDevelopment == true || data.websiteOptimization == true || data.consulting == true;
     if (!isChecked) return 'Bitte wählen Sie mindestens eine Option aus.';
+    return null;
+  }
+
+  /**
+   * Returns an error message for the username field based on its validity.
+   *
+   * @param data - An object containing the `username` string to validate.
+   * @returns A localized error message string if the username is invalid, or `null` if it is valid.
+   *
+   * - Returns `'Geben Sie Ihren Benutzernamen ein.'` if the username is empty.
+   * - Returns `'Der Benutzername muss mindestens 3 Zeichen lang sein.'` if the username is shorter than 3 characters.
+   * - Returns `null` if the username is valid.
+   */
+  errorMessageUsername(data: { username: string }): string | null {
+    if (data.username.length === 0) return 'Geben Sie Ihren Benutzernamen ein.';
+    if (data.username.length < 3) return 'Der Benutzername muss mindestens 3 Zeichen lang sein.';
+    return null;
+  }
+
+  /**
+   * Returns a localized error message for password validation.
+   *
+   * @param data - An object containing the password string to validate.
+   * @returns A German error message if the password is empty or too short, otherwise `null`.
+   */
+  errorMessagePassword(data: { password: string }): string | null {
+    if (data.password.length === 0) return 'Geben Sie Ihr Passwort ein.';
+    if (data.password.length < 6) return 'Das Passwort muss mindestens 6 Zeichen lang sein.';
     return null;
   }
 }

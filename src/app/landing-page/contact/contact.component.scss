@@ -12,7 +12,7 @@ section {
         @include flex-position($fd: row, $jc: space-between);
         gap: 200px;
 
-        app-contact-form,
+        app-form,
         .contact-info {
             width: 100%;
         }

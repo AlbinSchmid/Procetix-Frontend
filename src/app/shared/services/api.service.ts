@@ -10,6 +10,7 @@ export class ApiService {
   API_URL = 'http://localhost:8000/api';
 
   contactEmailUrl = `${this.API_URL}/contact-email/`;
+  loginUrl = `${this.API_URL}/login/`;
 
   /**
    * Sends a POST request to the specified URL with the provided data.

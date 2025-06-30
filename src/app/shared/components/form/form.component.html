@@ -164,3 +164,31 @@
     <button type="submit" *ngIf="loading" mat-flat-button disabled><mat-spinner></mat-spinner></button>
     <button type="submit" *ngIf="!loading" mat-flat-button>Absenden</button>
 </form>
+<form (ngSubmit)="submitForm(form, loginData)" #form="ngForm" *ngIf="form === 'login'" class="login-form">
+    <div class="input-group">
+        <h5>Benutzername <mark>*</mark></h5>
+        <label class="input-label">
+            <input type="text" name="username" placeholder="Benutzername" [(ngModel)]="loginData.username"
+                #username="ngModel" minlength="2" required>
+            <span class="form-error" *ngIf="username.invalid && username.touched || showErrors">
+                {{ errorMessageUsername(loginData) }}
+            </span>
+        </label>
+    </div>
+    <div class="input-group">
+        <h5>Password <mark>*</mark></h5>
+        <label class="input-label">
+            <div class="input-password-div">
+                <input [type]="passwordVisible ? 'text' : 'password'" name="password" placeholder="{{ passwordVisible ? 'password' : '********' }}" [(ngModel)]="loginData.password"
+                    #password="ngModel" minlength="6" required>
+                    <mat-icon fontIcon="visibility" (click)="passwordVisible = !passwordVisible" *ngIf="!passwordVisible"></mat-icon>
+                    <mat-icon fontIcon="visibility_off" (click)="passwordVisible = !passwordVisible" *ngIf="passwordVisible"></mat-icon>
+            </div>
+            <span class="form-error" *ngIf="password.invalid && password.touched || showErrors">
+                {{ errorMessagePassword(loginData) }}
+            </span>
+        </label>
+    </div>
+    <button type="submit" *ngIf="loading" mat-flat-button disabled><mat-spinner></mat-spinner></button>
+    <button type="submit" *ngIf="!loading" mat-flat-button>Einloggen</button>
+</form>

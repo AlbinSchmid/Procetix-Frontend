@@ -101,3 +101,32 @@ select {
 select.placeholder {
     color: rgba(0, 0, 0, 0.4);
 }
+
+
+
+.login-form {
+    max-width: 600px;
+
+    .input-password-div {
+        @include flex-position($fd: row, $ai: center);
+        gap: 8px;
+        width: 100%;
+
+        input {
+            width: 100%;
+            padding-right: 40px;
+        }
+
+        mat-icon {
+            position: absolute;
+            right: 12px;
+            cursor: pointer;
+            color: $blue;
+        }
+    }
+
+    button {
+        width: 100%;
+        max-width: none;
+    }
+}
