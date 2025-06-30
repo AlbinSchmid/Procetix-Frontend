@@ -80,6 +80,19 @@ app-header {
   left: 0;
 }
 
+b {
+    @include font-style($fs: 28px, $fw: 700);
+    color: black;
+}
+
+.mb-20 {
+    margin-bottom: 20px;
+}
+
+.mb-8 {
+    margin-bottom: 8px;
+}
+
 a {
   text-decoration: none;
   color: inherit;

@@ -1,0 +1,5 @@
+@use './../../../styles.scss' as *;
+
+.background {
+  @include background-image('/assets/img/privacy-policy/aot.png')
+}
